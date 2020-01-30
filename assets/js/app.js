@@ -25,7 +25,7 @@ $("#log-a-run-btn").on("click", function(event) {
   var boroughs = $("#boroughs")
     .val()
     .trim();
-  var runTime = $("#runTime")
+  var runTimes = $("#runTime")
     .val()
     .trim();
 
@@ -35,7 +35,7 @@ $("#log-a-run-btn").on("click", function(event) {
     newDate: runDate,
     newMileage: miles,
     newBoroughs: boroughs,
-    newRunTime: runTime
+    newRunTime: runTimes
   };
 
   // Uploads run data to the database
@@ -63,10 +63,10 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(childSnapshot.val());
 
   // Store everything into a variable.
-  var runDate = childSnapshot.val().newName;
-  var miles = childSnapshot.val().newDestination;
-  var boroughs = childSnapshot.val().newTime;
-  var runTime = childSnapshot.val().freq;
+  var runDate = childSnapshot.val().newDate;
+  var miles = childSnapshot.val().newMileage;
+  var boroughs = childSnapshot.val().newBoroughs;
+  var runTime = childSnapshot.val().newRunTime;
 
   // Log run info
   console.log(runDate);
