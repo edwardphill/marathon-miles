@@ -3,12 +3,12 @@
 }
 
 h1, h2 {
-    color: white;
+    color: black;
     font-family: Helvetica, sans-serif;
 }
 
 .lead {
-    color: white;
+    color: black;
     font-family: Helvetica, sans-serif;
 }
 
@@ -18,24 +18,24 @@ h1, h2 {
 }
 
 .card-header {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-family: Helvetica, sans-serif;
 }
 
 .card-body {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-family: Helvetica, sans-serif;
 }
 
 th {
-    color: white;
+    color: black;
     font-family: Helvetica, sans-serif;
 }
 
 td {
-    color: white;
+    color: black;
     font-family: Helvetica, sans-serif;
 }
 

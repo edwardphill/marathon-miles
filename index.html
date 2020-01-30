@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/css/style.css" />
     <title>marathon miles</title>
+
+    <!--CSS stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -16,6 +19,10 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
   </head>
 
   <body>
@@ -59,7 +66,7 @@
           <!-- Entry Form -->
           <form>
             <div class="form-group">
-              <label for="train-info">Run Date</label>
+              <label for="run-info">Run Date</label>
               <input
                 type="date"
                 class="form-control"
@@ -88,7 +95,7 @@
               <div class="form-group">
                 <label for="train-info">About how long was your run?</label>
                 <input
-                  type="text"
+                  type="time"
                   class="form-control"
                   id="runTime"
                   aria-describedby="emailHelp"
@@ -104,25 +111,8 @@
         </div>
       </div>
     </div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDX0WNeOSd3Tx1KboR2QPtUk2_n5lCcNGY",
-        authDomain: "marathon-miles.firebaseapp.com",
-        databaseURL: "https://marathon-miles.firebaseio.com",
-        projectId: "marathon-miles",
-        storageBucket: "marathon-miles.appspot.com",
-        messagingSenderId: "680241808246",
-        appId: "1:680241808246:web:4e8c8e7363f0ccf6fa7057"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
+    <!--JS link-->
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
