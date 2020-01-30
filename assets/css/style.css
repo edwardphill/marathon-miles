@@ -1,10 +1,18 @@
 * {
     font-family: Helvetica, sans-serif;
+    background-color: #202124;
 }
 
-h1, h2 {
-    color: black;
-    font-family: Helvetica, sans-serif;
+.container {
+    color: #98ECC3;
+    background-color: #202124;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h5 {
+    color: white;
+    background-color: #202124;
 }
 
 .lead {
@@ -12,30 +20,32 @@ h1, h2 {
     font-family: Helvetica, sans-serif;
 }
 
-.jumbotron {
-    background-color: black;
-    margin-bottom: 0;
+.card {
+    color: #98ECC3;
+    background-color: #202124;
 }
 
 .card-header {
-    background-color: white;
-    color: black;
+    color: #98ECC3;
+    background-color: #202124;
     font-family: Helvetica, sans-serif;
 }
 
 .card-body {
-    background-color: white;
-    color: black;
+    background-color: #202124;
+    color: white;
     font-family: Helvetica, sans-serif;
 }
 
 th {
-    color: black;
+    color: white;
+    background-color: #202124;
     font-family: Helvetica, sans-serif;
 }
 
 td {
-    color: black;
+    color: white;
+    background-color: #202124;
     font-family: Helvetica, sans-serif;
 }
 
