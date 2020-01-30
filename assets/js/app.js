@@ -1,12 +1,9 @@
 // 1. Initialize Firebase
-const firebaseConfig = {
+var firebaseConfig = {
   apiKey: "AIzaSyDX0WNeOSd3Tx1KboR2QPtUk2_n5lCcNGY",
   authDomain: "marathon-miles.firebaseapp.com",
   databaseURL: "https://marathon-miles.firebaseio.com",
-  projectId: "marathon-miles",
-  storageBucket: "marathon-miles.appspot.com",
-  messagingSenderId: "680241808246",
-  appId: "1:680241808246:web:4e8c8e7363f0ccf6fa7057"
+  storageBucket: "marathon-miles.appspot.com"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -48,8 +45,8 @@ $("#log-a-run-btn").on("click", function(event) {
 
   console.log(newRunLog.newDate);
   console.log(newRunLog.newMileage);
-  console.log(newRunLog.boroughs);
-  console.log(newRunLog.runTime);
+  console.log(newRunLog.newBoroughs);
+  console.log(newRunLog.newRunTime);
 
   alert("Run log successfully added");
 
@@ -83,4 +80,6 @@ database.ref().on("child_added", function(childSnapshot) {
     $("<td>").text(boroughs),
     $("<td>").text(runTime)
   );
+  // Append the new row to the table
+  $("#run-table > tbody").append(newRow);
 });
