@@ -48,13 +48,39 @@ $("#log-a-run-btn").on("click", function(event) {
   console.log(newRunLog.newBoroughs);
   console.log(newRunLog.newRunTime);
 
-  alert("Run log successfully added");
-
   // Clears all of the text-boxes
   $("#runDate").val("");
   $("#miles").val("");
   $("#boroughs").val("");
   $("#runTime").val("");
+});
+
+$("#log-a-run-btn").on("click", function() {
+  // Storing our giphy API URL for a random cat image
+  var queryURL =
+    "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=running";
+
+  // Perfoming an AJAX GET request to our queryURL
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+
+    // After the data from the AJAX request comes back
+    .then(function(response) {
+      // Saving the image_original_url property
+      var imageUrl = response.data.image_original_url;
+
+      // Creating and storing an image tag
+      var runningImg = $("<img>");
+
+      // Setting the runningImg src attribute to imageUrl
+      runningImg.attr("src", imageUrl);
+      runningImg.attr("alt", "runner image");
+
+      // Prepending the runningImg to the images div
+      $("#gifInsert").prepend(runningImg);
+    });
 });
 
 // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
