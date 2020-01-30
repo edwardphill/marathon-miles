@@ -1,51 +1,52 @@
 * {
     font-family: Helvetica, sans-serif;
-    background-color: #202124;
 }
 
 .container {
-    color: #98ECC3;
-    background-color: #202124;
+    color: #202124;
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h5 {
-    color: white;
+.jumbotron {
     background-color: #202124;
 }
 
+h1, h2, h5 {
+    color: #202124;
+}
+
 .lead {
-    color: black;
+    color: #202124;
     font-family: Helvetica, sans-serif;
 }
 
 .card {
-    color: #98ECC3;
-    background-color: #202124;
+    color: #202124;
+    background-color: white;
 }
 
 .card-header {
-    color: #98ECC3;
-    background-color: #202124;
+    color: #202124;
+    background-color: white;
     font-family: Helvetica, sans-serif;
 }
 
 .card-body {
-    background-color: #202124;
-    color: white;
+    color: #202124;
+    background-color: white;
     font-family: Helvetica, sans-serif;
 }
 
 th {
-    color: white;
-    background-color: #202124;
+    color: #202124;
+    background-color: white;
     font-family: Helvetica, sans-serif;
 }
 
 td {
-    color: white;
-    background-color: #202124;
+    color: #202124;
+    background-color: white;
     font-family: Helvetica, sans-serif;
 }
 
