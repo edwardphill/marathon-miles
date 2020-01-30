@@ -1,2 +1,2 @@
 # marathon-miles
-jQuery, moment.js, and Firebase app to track mileage for 2020 training. 
+JavaScript, jQuery, and Firebase app to track mileage for 2020 NYC Marathon Training. Uses Bootstrap. 
