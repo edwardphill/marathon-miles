@@ -6,8 +6,111 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <title>marathon miles</title>
+    <!-- Bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <!-- Jumbotron -->
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Marathon Miles 🏃‍♂️💨</h1>
+          <p class="lead">
+            Tracking miles, making smiles.
+          </p>
+        </div>
+      </div>
+
+      <!-- Current Train Schedule-->
+
+      <div class="card">
+        <h5 class="card-header">
+          Mileage History
+        </h5>
+        <div class="card-body">
+          <table class="table" id="train-table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Mileage</th>
+                <th scope="col">Time</th>
+                <th scope="col">Borough</th>
+                <th scope="col">Total Milage</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Add Train  -->
+      <div class="card">
+        <h5 class="card-header">Log A Run</h5>
+        <div class="card-body">
+          <!-- Entry Form -->
+          <form>
+            <div class="form-group">
+              <label for="train-info">date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="lineName"
+                placeholder="Enter date of run."
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Mileage</label>
+              <input
+                type="number"
+                class="form-control"
+                id="destination"
+                placeholder="Mileage"
+              />
+
+              <div class="form-group">
+                <label for="train-info-time">What Borough's did you hit?</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="trainTimes"
+                  placeholder="Get all 5 if you dare!"
+                />
+              </div>
+              <div class="form-group">
+                <label for="train-info">About how long was your run?</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="frequency"
+                  aria-describedby="emailHelp"
+                  placeholder="Get up to 4 hours?... aiaiai"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="add-train-btn">
+              Log a run
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
 </html>

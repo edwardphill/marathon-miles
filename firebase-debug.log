@@ -1,0 +1,55 @@
+[debug] [2020-01-30T02:14:53.531Z] ----------------------------------------------------------------------
+[debug] [2020-01-30T02:14:53.535Z] Command:       /usr/local/Cellar/node/12.10.0/bin/node /usr/local/bin/firebase init
+[debug] [2020-01-30T02:14:53.535Z] CLI Version:   7.12.1
+[debug] [2020-01-30T02:14:53.535Z] Platform:      darwin
+[debug] [2020-01-30T02:14:53.535Z] Node Version:  v12.10.0
+[debug] [2020-01-30T02:14:53.537Z] Time:          Wed Jan 29 2020 21:14:53 GMT-0500 (Eastern Standard Time)
+[debug] [2020-01-30T02:14:53.537Z] ----------------------------------------------------------------------
+[debug] [2020-01-30T02:14:53.537Z] 
+[debug] [2020-01-30T02:14:53.557Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-30T02:14:53.558Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/edwardhill/Columbia/practice-github-repos/marathon-miles
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project.
+[debug] [2020-01-30T02:15:28.759Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-30T02:15:28.760Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-30T02:15:28.990Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-30T02:15:29.019Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+
+[debug] [2020-01-30T02:15:29.891Z] <<< HTTP RESPONSE 409
+[debug] [2020-01-30T02:15:29.891Z] <<< HTTP RESPONSE BODY
+[debug] [2020-01-30T02:15:29.892Z] HTTP Error: 409, Requested entity already exists
+[debug] [2020-01-30T02:15:30.040Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:39:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:209:13)
+    at Request.EventEmitter.emit (domain.js:476:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1161:10)
+    at Request.emit (events.js:209:13)
+    at Request.EventEmitter.emit (domain.js:476:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1083:12)
+    at Object.onceWrapper (events.js:298:28)
+    at IncomingMessage.emit (events.js:214:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:476:20)
+    at endReadableNT (_stream_readable.js:1178:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to create Google Cloud project. See firebase-debug.log for more info.
