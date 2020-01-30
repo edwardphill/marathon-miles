@@ -26,7 +26,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">Marathon Miles 🏃‍♂️💨</h1>
@@ -40,6 +40,8 @@
         <h5 class="card-header">
           Mileage History
         </h5>
+        <div class="mileageTracker"></div>
+
         <div class="card-body">
           <table class="table" id="run-table">
             <thead>
@@ -57,65 +59,73 @@
 
       <br />
 
-      <!--Insert Gif when run added-->
-      <div id="gifInsert"></div>
-      <br />
-      <!-- Add Run  -->
-      <div class="card">
-        <h5 class="card-header">Log A Run</h5>
-        <div class="card-body">
-          <!-- Entry Form -->
-          <form>
-            <div class="form-group">
-              <label for="run-info">Run Date</label>
-              <input
-                type="date"
-                class="form-control"
-                id="runDate"
-                placeholder="Enter date of run."
-              />
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Run Mileage</label>
-              <input
-                type="number"
-                class="form-control"
-                id="miles"
-                placeholder="Mileage"
-              />
-
+      <div class="cards">
+        <div class="card" style="width: 18rem;">
+          <h5 class="card-header">Log A Run</h5>
+          <div class="card-body">
+            <!-- Entry Form -->
+            <form>
               <div class="form-group">
-                <label for="train-info-time"
-                  >How many Boroughs did you hit?</label
-                >
+                <label for="run-info">Run Date</label>
                 <input
-                  type="text"
+                  type="date"
                   class="form-control"
-                  id="boroughs"
-                  placeholder="Get all 5 if you dare!"
+                  id="runDate"
+                  placeholder="Enter date of run."
                 />
               </div>
               <div class="form-group">
-                <label for="train-info">About how long was your run?</label>
+                <label for="exampleInputPassword1">Run Mileage</label>
                 <input
-                  type="text"
+                  type="number"
                   class="form-control"
-                  id="runTime"
-                  aria-describedby="emailHelp"
-                  placeholder="Get up to 4 hours?... aiaiai"
+                  id="miles"
+                  placeholder="Mileage"
                 />
-              </div>
-            </div>
 
-            <button type="submit" class="btn btn-primary" id="log-a-run-btn">
-              Log a run
-            </button>
-            <br />
-          </form>
+                <div class="form-group">
+                  <label for="train-info-time"
+                    >How many Boroughs did you hit?</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="boroughs"
+                    placeholder="Get all 5 if you dare!"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="train-info">About how long was your run?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="runTime"
+                    aria-describedby="emailHelp"
+                    placeholder="Get up to 4 hours?... aiaiai"
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="log-a-run-btn">
+                Log a run
+              </button>
+              <br />
+            </form>
+          </div>
+        </div>
+        <br />
+        <div class="card" style="width: 18rem;">
+          <!--Insert Gif when run added-->
+          <div id="gifInsert"></div>
+          <div class="card-body">
+            <h5 class="card-title">Total Mileage</h5>
+            <p class="card-text">
+              NEEDED
+            </p>
+          </div>
         </div>
       </div>
     </div>
-
     <!--JS link-->
     <script src="assets/js/app.js"></script>
   </body>

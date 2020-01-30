@@ -6,6 +6,9 @@ var firebaseConfig = {
   storageBucket: "marathon-miles.appspot.com"
 };
 
+var totalMiles = 0;
+var mileCount = miles;
+
 firebase.initializeApp(firebaseConfig);
 
 // Get a reference to the database service
@@ -108,4 +111,12 @@ database.ref().on("child_added", function(childSnapshot) {
   );
   // Append the new row to the table
   $("#run-table > tbody").append(newRow);
+});
+
+// ADD TOTAL MILEAGE
+
+$("#log-a-run-btn").on("click", function() {
+  mileCount += dailyMiles;
+  $("#totalMiles").html(mileCount);
+  console.log(mileCount);
 });

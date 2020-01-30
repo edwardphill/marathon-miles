@@ -25,6 +25,10 @@ h1, h2, h5 {
     color: #202124;
 }
 
+.cards {
+    display: inline-block;
+}
+
 .lead {
     color: #202124;
     font-family: Helvetica, sans-serif;
