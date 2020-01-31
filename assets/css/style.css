@@ -40,6 +40,10 @@ img {
     font-family: Helvetica, sans-serif;
 }
 
+.btn {
+    margin: 5px;
+}
+
 .card {
     color: #202124;
     background-color: white;
