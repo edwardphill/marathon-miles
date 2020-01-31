@@ -86,6 +86,34 @@ $("#log-a-run-btn").on("click", function() {
     });
 });
 
+$("#motivated").on("click", function() {
+  // Storing our giphy API URL for a random cat image
+  var queryURL =
+    "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=motivation";
+
+  // Perfoming an AJAX GET request to our queryURL
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+
+    // After the data from the AJAX request comes back
+    .then(function(response) {
+      // Saving the image_original_url property
+      var imageUrl = response.data.image_original_url;
+
+      // Creating and storing an image tag
+      var motivatedImg = $("<img>");
+
+      // Setting the motivatedImg src attribute to imageUrl
+      motivatedImg.attr("src", imageUrl);
+      motivatedImg.attr("alt", "runner image");
+
+      // Prepending the motivatedImg to the images div
+      $("#gif2Insert").prepend(motivatedImg);
+    });
+});
+
 // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
 
 database.ref().on("child_added", function(childSnapshot) {
@@ -119,4 +147,22 @@ $("#log-a-run-btn").on("click", function() {
   mileCount += dailyMiles;
   $("#totalMiles").html(mileCount);
   console.log(mileCount);
+});
+
+$("#runHist-btn").click(function() {
+  $("#whyRun").css("display", "none");
+  $("#logANewRunTable").css("display", "none");
+  $("#milesTrackerTable").css("display", "inline");
+});
+
+$("#logRun-btn").click(function() {
+  $("#whyRun").css("display", "none");
+  $("#logANewRunTable").css("display", "inline");
+  $("#milesTrackerTable").css("display", "none");
+});
+
+$("#whyImRunning").click(function() {
+  $("#whyRun").css("display", "inline");
+  $("#logANewRunTable").css("display", "none");
+  $("#milesTrackerTable").css("display", "none");
 });

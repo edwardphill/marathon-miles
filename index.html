@@ -29,14 +29,64 @@
     <div class="container-fluid">
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Marathon Miles 🏃‍♂️💨</h1>
-          <p class="lead">Tracking miles, making smiles.</p>
+          <h1 class="display-4">Marathon Miles 🗽🍎🏃‍♂️💨</h1>
+          <p class="lead">Tracking miles. Making smiles.</p>
         </div>
       </div>
 
       <!-- Run Log -->
 
-      <div class="card">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div id="gif2Insert"></div>
+            <div class="card-body">
+              <h5 class="card-title">Get Motivated</h5>
+              <a href="#" class="btn btn-primary" id="motivated">GET PUMPED!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Total Miles</h5>
+              <p class="card-text">
+                ## NUM calculated in JS
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Days To The Race</h5>
+
+              <p class="card-text">
+                ## NUM calculated in JS
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card" style="width: 30rem;">
+        <h5 class="card-header">🏃‍♂️🏃‍♂️🏃‍♂️🏃‍♂️</h5>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary" id="runHist-btn"
+            >Show Run History</a
+          >
+          <a href="#" class="btn btn-primary" id="logRun-btn">Log A Run</a>
+          <a href="#" class="btn btn-primary" id="whyImRunning"
+            >Why I'm Running</a
+          >
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card" id="milesTrackerTable" style="display:none;">
         <h5 class="card-header">
           Mileage History
         </h5>
@@ -59,7 +109,7 @@
 
       <br />
 
-      <div class="cards">
+      <div class="cards" id="logANewRunTable" style="display:none;">
         <div class="card" style="width: 18rem;">
           <h5 class="card-header">Log A Run</h5>
           <div class="card-body">
@@ -112,17 +162,28 @@
               <br />
             </form>
           </div>
+
+          <br />
         </div>
-        <br />
-        <div class="card" style="width: 18rem;">
-          <!--Insert Gif when run added-->
-          <div id="gifInsert"></div>
-          <div class="card-body">
-            <h5 class="card-title">Total Mileage</h5>
-            <p class="card-text">
-              NEEDED
-            </p>
-          </div>
+      </div>
+      <div class="card" id="whyRun" style="display:none;">
+        <h5 class="card-header">NYC 2020</h5>
+        <div class="card-body">
+          <p class="card-text">
+            I'm hoping to run the 2020 NYC Marathon, representing South Bronx
+            United. <br />
+            South Bronx United is a nonprofit, youth development organization
+            that uses soccer to engage immigrant and first-generation youth and
+            support the broader South Bronx community. <br />I ran the 2016
+            Charlottesville marathon in just under 5 hours. It's my goal to run
+            the NYC race in under 4.
+          </p>
+          <a
+            href="https://www.southbronxunited.org/"
+            target="_blank"
+            class="btn btn-primary"
+            >Visit SBU</a
+          >
         </div>
       </div>
     </div>
