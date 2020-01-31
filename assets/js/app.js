@@ -55,10 +55,10 @@ $("#log-a-run-btn").on("click", function(event) {
   $("#runTime").val("");
 });
 
-$("#log-a-run-btn").on("click", function() {
+$("#countdown").on("click", function() {
   // Storing our giphy API URL for a random cat image
   var queryURL =
-    "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=running";
+    "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=dog";
 
   // Perfoming an AJAX GET request to our queryURL
   $.ajax({
@@ -72,14 +72,14 @@ $("#log-a-run-btn").on("click", function() {
       var imageUrl = response.data.image_original_url;
 
       // Creating and storing an image tag
-      var runningImg = $("<img>");
+      var countdownGif = $("<img>");
 
-      // Setting the runningImg src attribute to imageUrl
-      runningImg.attr("src", imageUrl);
-      runningImg.attr("alt", "runner image");
+      // Setting the countdownGif src attribute to imageUrl
+      countdownGif.attr("src", imageUrl);
+      countdownGif.attr("alt", "runner image");
 
-      // Prepending the runningImg to the images div
-      $("#gifInsert").prepend(runningImg);
+      // Prepending the countdownGif to the images div
+      $("#gif3Insert").prepend(countdownGif);
 
       var existingImage = l.getElementById("img");
 
@@ -118,6 +118,44 @@ $("#motivated").on("click", function() {
 
       // Prepending the motivatedImg to the images div
       $("#gif2Insert").prepend(motivatedImg);
+    });
+});
+
+$("#log-a-run-btn").on("click", function() {
+  // Storing our giphy API URL for a random countdown image
+  var queryURL =
+    "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=running";
+
+  // Perfoming an AJAX GET request to our queryURL
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+
+    // After the data from the AJAX request comes back
+    .then(function(response) {
+      // Saving the image_original_url property
+      var imageUrl = response.data.image_original_url;
+
+      // Creating and storing an image tag
+      var runningImg = $("<img>");
+
+      // Setting the runningImg src attribute to imageUrl
+      runningImg.attr("src", imageUrl);
+      runningImg.attr("alt", "runner image");
+
+      // Prepending the runningImg to the images div
+      $("#gifInsert").prepend(runningImg);
+
+      var existingImage = l.getElementById("img");
+
+      // if there are any <img> elements found:
+      if (existingImage.length) {
+        // we navigate to the parent-element of that first <img>
+        // and replace that image, using Node.replaceChild(),
+        // with the newly-created <img>:
+        existingImage[0].parentNode.replaceChild(pic, existingImage[0]);
+      }
     });
 });
 
