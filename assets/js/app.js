@@ -6,9 +6,6 @@ var firebaseConfig = {
   storageBucket: "marathon-miles.appspot.com"
 };
 
-var totalMiles = 0;
-var mileCount = miles;
-
 firebase.initializeApp(firebaseConfig);
 
 // Get a reference to the database service
@@ -143,11 +140,7 @@ database.ref().on("child_added", function(childSnapshot) {
 
 // ADD TOTAL MILEAGE
 
-$("#log-a-run-btn").on("click", function() {
-  mileCount += dailyMiles;
-  $("#totalMiles").html(mileCount);
-  console.log(mileCount);
-});
+// display none logic / onclick logic
 
 $("#runHist-btn").click(function() {
   $("#whyRun").css("display", "none");
@@ -187,8 +180,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="demo"
-  document.getElementById("raceDate").innerHTML =
-    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById("raceDate").innerHTML = days + " days "; //+ hours + "h " + minutes + "m " + seconds + "s "
 
   // If the count down is over, write some text
   if (distance < 0) {
@@ -196,3 +188,19 @@ var x = setInterval(function() {
     document.getElementById("raceDate").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+/* Count total miles
+
+
+$(".form-group").on("input", ".prc", function() {
+  var totalMiles = 0;
+  $(".form-group .prc").each(function() {
+    var imputVal = $(this).val();
+    if ($.isNumeric(inputVal)) {
+      totalMiles += parseFloat(inputVal);
+    }
+  });
+  $("#liveMilesTracker").text(totalMiles);
+});
+
+*/

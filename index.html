@@ -26,7 +26,7 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">Marathon Miles 🗽🍎</h1>
@@ -35,6 +35,16 @@
       </div>
 
       <!-- Run Log -->
+
+      <!-- workingon count total mile
+
+      <div class="form-group">
+        <label>Test</label>
+        <input type="number" class="form-control prc">
+        <p id="liveMilesTracker"></p>
+      </div>
+    
+    -->
 
       <div class="row">
         <div class="col-sm-4">
@@ -46,16 +56,20 @@
             </div>
           </div>
         </div>
+
+
         <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Total Miles</h5>
               <p class="card-text">
-                ## NUM calculated in JS
+                <p id="liveMilesTracker"></p>
               </p>
             </div>
           </div>
         </div>
+
+
         <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
@@ -164,17 +178,38 @@
         </div>
       </div>
       <div class="card" id="whyRun" style="display:none;">
-        <h5 class="card-header">NYC 2020</h5>
+        <h5 class="card-header">NYC 2020 📆</h5>
         <div class="card-body">
           <p class="card-text">
-            I'm hoping to run the 2020 NYC Marathon, representing South Bronx
-            United. <br />
+            I'm hoping to run the 2020 NYC Marathon representing South Bronx
+            United.<br />
+            <br>
             South Bronx United is a nonprofit, youth development organization
             that uses soccer to engage immigrant and first-generation youth and
-            support the broader South Bronx community. <br />I ran the 2016
-            Charlottesville marathon in just under 5 hours. It's my goal to run
-            the NYC race in under 4.
+            support the broader South Bronx community. <br />
+            <br>
+            I played soccer in highschool, coached soccer after college, and have worked at camps my whole life, so I'm happy to *hopefully* support SBU!
+            <br><br>
+            I ran the 2016 Charlottesville marathon in just under 5 hours, so it's my goal to run
+            the NYC race in under 4 hours.
           </p>
+
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="assets/imgs/sbu.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-header">Fundraising 💰</h5><br>
+                <p class="card-text">I'll be raising $2,400 for SBU.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Goal: $2,400 </li>
+                <li class="list-group-item">Amount Raised: $0</li>
+                <li class="list-group-item">Amount Remaining: $2,400</li>
+              </ul>
+            </div>
+
+
+            <br>
+
           <a
             href="https://www.southbronxunited.org/"
             target="_blank"
