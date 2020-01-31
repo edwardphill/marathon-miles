@@ -21,8 +21,12 @@ img {
     background-color: #202124;
 }
 
-h1, h2, h5 {
+.h1, h2, h5 {
     color: #202124;
+}
+
+.h3 {
+    font-size: 3.5rem;
 }
 
 .cards {
