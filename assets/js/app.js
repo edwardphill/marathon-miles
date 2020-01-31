@@ -80,6 +80,16 @@ $("#log-a-run-btn").on("click", function() {
 
       // Prepending the runningImg to the images div
       $("#gifInsert").prepend(runningImg);
+
+      var existingImage = l.getElementById("img");
+
+      // if there are any <img> elements found:
+      if (existingImage.length) {
+        // we navigate to the parent-element of that first <img>
+        // and replace that image, using Node.replaceChild(),
+        // with the newly-created <img>:
+        existingImage[0].parentNode.replaceChild(pic, existingImage[0]);
+      }
     });
 });
 
