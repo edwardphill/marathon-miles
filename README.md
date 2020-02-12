@@ -8,9 +8,9 @@ A JavaScript, jQuery, and Firebase app to track mileage for 2020 NYC Marathon Tr
 - Log a run to track your training for the NYC 2020 Marathon. Get motivated or rewarded with a GIF. Just what you need to get out the door and log the next run. 
 
 # Technologies Used
-*HTML
-*CSS
-*JavaScipt
-*Google Firebase
-*jQuery
+* HTML
+* CSS
+* JavaScipt
+* Google Firebase
+* jQuery
 
